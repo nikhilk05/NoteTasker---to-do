@@ -76,59 +76,27 @@ body{
 }
 
 #error-msg{
+    display: none;
     width: 100%;
     margin-top: 35px;
     font-size: 13px;
     font-weight: 500;
-    padding-left: 25px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     color: red;
-}
-
-#list-container{
-    display: grid;
-    width: 100%;
-    gap: 15px;
-    margin-top: 35px;
-}
-
-span{
-    font-size: 18px;
-    height: 20px;
-    width: 20px;
-    margin-left: 78px;
-    line-height: 18px;
-    border: 2px solid;
-    border-radius: 50%;
-    opacity: .5;
-    position: absolute;
-    cursor: pointer;
-}
-
-span:hover{
-    background-color: #ff0000;
-    color: #ffffff;
-    border: 2px solid #ff0000;
-    opacity: 1;
 }
 
 #list-container li{
     list-style: none;
-    height: 50px;
     position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding: 0 0 0 60px;
+    margin-top: 30px;
+    font-size: 16px;
+    padding: 12px 60px 12px;
     border-radius: 40px;
     font-weight: 500;
-    border: 2px solid coral;
+    border: 2px solid #ff7f50;
 }
 
-#list-container li::before{
+ul li::before{
     content: '';
     position: absolute;
     top: 13px;
@@ -143,11 +111,11 @@ span:hover{
 }
 
 .checked{
-    color: #555;
+    color: #ff7f50;
     text-decoration: line-through;
 }
 
-.checked::after{
+ul li.checked::after{
     content: '';
     position: absolute;
     top: 13px;
@@ -164,53 +132,23 @@ span:hover{
 li span{
     position: absolute;
     right: 25px;
-    top: 14px;
+    top: 13px;
+    text-align: center;
     color: #ff0000;
-    font-size: 18px;
-    height: 20px;
-    width: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.icons{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    transform: translate(345px, 16px);
+    height: 22px;
+    width: 22px;
+    line-height: 20px;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 50%;
+    opacity: .5;
     cursor: pointer;
 }
 
-.edit-icon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 8px;
-    height: 21px;
-    width: 21px;
-    border-radius: 50%;
-    border: 2px solid coral;
-    opacity: .5;
-    color: coral;
-    user-select: none;
-}
-
-.edit-icon:hover{
-    color: #11b411;
-    border: 2px solid #11b411;
-    opacity: 1;
-}
-
-.x-icon{
-    font-size: 20px;
-    color:  coral;
-    opacity: .5;
-}
-
-.x-icon:hover{
-    color: red;
+ul li span:hover{
+    background-color: #ff0000;
+    color: #ffffff;
+    border: 2px solid #ff0000;
     opacity: 1;
 }
 
@@ -227,9 +165,69 @@ li span{
     .title img {
         width: 20px;
     }
+}
 
-    .icons{
-        transform: translate(208px, 16px);
+@media screen and (min-width: 475px) and (max-width: 539.5px) {
+
+    .to-do {
+        width: 80%;
+        padding: 40px;
     }
-    
+}
+
+@media screen and (min-width: 540px) and (max-width: 640px) {
+
+    .to-do {
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 768px) {
+
+    .to-do {
+        width: 65%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 840px) {
+
+    .to-do {
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 840px) and (max-width: 1024px) {
+    .to-do {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .to-do {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1440px) {
+    .to-do {
+        width: 36%;
+    }
+}
+
+@media screen and (min-width: 1560px) and (max-width: 1800px) {
+    .to-do {
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 1800.5px) and (max-width: 2150px){
+    .to-do {
+        width: 28%;
+    }
+}
+
+@media screen and (min-width: 2150px){
+    .to-do {
+        width: 23%;
+    }
 }

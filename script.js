@@ -3,18 +3,14 @@ const addTaskbtn = document.getElementById("addTask");
 const listTask = document.getElementById("list-container");
 const errorMsg = document.getElementById("error-msg");
 
-addTaskbtn.addEventListener('click', function addTask(e){
+addTaskbtn.addEventListener('click', function(){
+    errorMsg.style.display = "none";
     if(inputFieldbox.value == ''){
-        let msg = document.createElement("div")
-        msg.innerHTML = "You have to write something to add task.";
-        errorMsg.appendChild(msg);
-        let span = document.createElement("span");
-        span.innerHTML = "\u00d7";
-        msg.appendChild(span);
+        errorMsg.style.display = "block"
     } 
     else{
         let li = document.createElement("LI");
-        li.innerHTML = inputFieldbox.value[0].toUpperCase() + inputFieldbox.value.slice(1);
+        li.innerHTML = inputFieldbox.value[0].toUpperCase() + inputFieldbox.value.slice(1).trim();
         listTask.appendChild(li);
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
